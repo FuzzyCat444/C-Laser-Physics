@@ -23,5 +23,5 @@ This project features:
 
 This program runs at about 500 fps on my machine without the Gaussian blur, and sinks to about 60 fps with Gaussian blur on.
 
-# Compilation Instructions
+## Compilation Instructions
 To compile this application, create a folder called "project" or similar and place the src folder and build.bat into the folder. Install the SDL2-2.28.3 dev library for visual studio at "C:\SDL2-2.28.3" or wherever you want, updating the build.bat file to refer to the correct library directory. Copy the SDL.dll file from "C:\SDL2-2.28.3\lib\x64" into the "project" folder. Then open the "x64 Native Tools Command Prompt for VS 2022" application, navigate to the "project" folder, and run the "build.bat" file.

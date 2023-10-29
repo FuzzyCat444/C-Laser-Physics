@@ -1,4 +1,4 @@
-C Laser Physics
+#C Laser Physics
 
 ![Screenshot 1](screenshots/screenshot1.png)
 

@@ -9,6 +9,7 @@
 [YouTube Video](https://youtu.be/Ckl28zhAK58)
 
 From YouTube description:
+
 The software rendering and "physics" in this video were written entirely from scratch in C by me, Harrison (aka FuzzyCat). SDL2 was used to open the window.
 
 This project features:

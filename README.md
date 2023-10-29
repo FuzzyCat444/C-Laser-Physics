@@ -6,7 +6,7 @@
 
 ![Screenshot 3](screenshots/screenshot3.png)
 
-### [YouTube Video](https://youtu.be/Ckl28zhAK58)
+### [-> YouTube Video](https://youtu.be/Ckl28zhAK58)
 
 From YouTube description:
 

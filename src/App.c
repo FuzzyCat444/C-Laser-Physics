@@ -171,7 +171,6 @@ void App_Render(App* app, double delta) {
     Color playerCol = app->playerCol;
     
     Raster* screen = app->screen;
-    uint8_t* pixels = screen->pixels;
     int width = screen->width;
     int height = screen->height;
     Raster_Clear(screen, floorCol);

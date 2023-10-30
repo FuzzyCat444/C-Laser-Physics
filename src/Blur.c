@@ -42,7 +42,6 @@ void blur(double* rasterA, double* rasterB, int width, int height,
         int endX = x + size + 1;
         if (endX > width) {
             endWeightI -= endX - width;
-            endX = width;
         }
         int idxA = startX;
         for (int y = 0; y < height; y++) {
@@ -81,7 +80,6 @@ void blur(double* rasterA, double* rasterB, int width, int height,
         int endY = y + size + 1;
         if (endY > height) {
             endWeightI -= endY - height;
-            endY = height;
         }
         int idxA = startY * rowInc;
         for (int x = 0; x < width; x++) {

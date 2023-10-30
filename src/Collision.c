@@ -11,7 +11,7 @@ Vector collideCirclePolygons(Vector center, double radius,
     case 0:
         return center;
         break;
-    case 1:
+    case 1: {
         Vector newCenter = center;
         newCenter.x += check1.pushVecs[0].x;
         newCenter.y += check1.pushVecs[0].y;
@@ -61,11 +61,12 @@ Vector collideCirclePolygons(Vector center, double radius,
             return newCenter;
         }
         break;
-    case 2:
-        newCenter = center;
+    }
+    case 2: {
+        Vector newCenter = center;
         newCenter.x += check1.pushVecs[0].x;
         newCenter.y += check1.pushVecs[0].y;
-        check2 = collideCirclePolygonsHelper(
+        CirclePolygonsCollision check2 = collideCirclePolygonsHelper(
             newCenter, radius, polygons, polygonsSize
         );
         
@@ -100,6 +101,7 @@ Vector collideCirclePolygons(Vector center, double radius,
         newCenter.y += push.y;
         return newCenter;
         break;
+    }
     }
     return center;
 }

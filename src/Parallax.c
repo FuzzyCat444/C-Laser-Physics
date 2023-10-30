@@ -1,5 +1,7 @@
 #include "Parallax.h"
 
+#include "Line.h"
+
 void renderParallax(Raster* screen, const Polygon* const* polygons,
     RenderPolygon* const* renderPolygons, int polygonsSize, const View* view,
     int numSlices, double z1, Color col1, double z2, Color col2, int doCap,

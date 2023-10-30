@@ -1,0 +1,28 @@
+name: cpp-linter
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  clang-tidy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: libsdl2-dev
+
+      - uses: cpp-linter/cpp-linter-action@v2
+        id: linter
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          style: '' # disable
+          tidy-checks: '' # use .clang-tidy
+          files-changed-only: false
+
+      - name: fail
+        if: steps.linter.outputs.checks-failed > 0
+        run: exit 1

@@ -1,0 +1,4 @@
+---
+Checks: 'clang-diagnostic-*,-clang-diagnostic-incompatible-pointer-types-discards-qualifiers,bugprone-*,-bugprone-easily-swappable-parameters,-bugprone-implicit-widening-of-multiplication-result,performance-*,modernize-*,clang-analyzer-*,-clang-analyzer-optin.portability.UnixAPI'
+...
+

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#include <SDL2/SDL.h>
+#include <SDL.h>
 
 #include "App.h"
 #include "Vector.h"

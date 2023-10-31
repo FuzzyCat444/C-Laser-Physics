@@ -66,7 +66,7 @@ void renderLine(Raster* screen, Vector p1, Vector p2, Color col,
         p2.y = y;
     }
     
-    if (abs(dx) >= abs(dy)) {
+    if (fabs(dx) >= fabs(dy)) {
         if (p2.x < p1.x) {
             Vector tmp = p1;
             p1 = p2;
@@ -76,7 +76,7 @@ void renderLine(Raster* screen, Vector p1, Vector p2, Color col,
         int startX = (int) (p1.x + 0.5);
         int endX = (int) (p2.x + 0.5);
         double startYExact = p1.y + dydx * (startX + 0.5 - p1.x);
-        double startY = (int) startYExact;
+        int startY = (int) startYExact;
         int yInc;
         double error;
         double errorInc;
@@ -114,7 +114,7 @@ void renderLine(Raster* screen, Vector p1, Vector p2, Color col,
         int startY = (int) (p1.y + 0.5);
         int endY = (int) (p2.y + 0.5);
         double startXExact = p1.x + dxdy * (startY + 0.5 - p1.y);
-        double startX = (int) startXExact;
+        int startX = (int) startXExact;
         int xInc;
         double error;
         double errorInc;
@@ -208,7 +208,7 @@ void renderLineDoubleBuffer(double* screen, int width, int height,
         p2.y = y;
     }
     
-    if (abs(dx) >= abs(dy)) {
+    if (fabs(dx) >= fabs(dy)) {
         if (p2.x < p1.x) {
             Vector tmp = p1;
             p1 = p2;
@@ -218,7 +218,7 @@ void renderLineDoubleBuffer(double* screen, int width, int height,
         int startX = (int) (p1.x + 0.5);
         int endX = (int) (p2.x + 0.5);
         double startYExact = p1.y + dydx * (startX + 0.5 - p1.x);
-        double startY = (int) startYExact;
+        int startY = (int) startYExact;
         int yInc;
         double error;
         double errorInc;
@@ -254,7 +254,7 @@ void renderLineDoubleBuffer(double* screen, int width, int height,
         int startY = (int) (p1.y + 0.5);
         int endY = (int) (p2.y + 0.5);
         double startXExact = p1.x + dxdy * (startY + 0.5 - p1.y);
-        double startX = (int) startXExact;
+        int startX = (int) startXExact;
         int xInc;
         double error;
         double errorInc;

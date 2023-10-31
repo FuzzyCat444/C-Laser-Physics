@@ -19,11 +19,9 @@ Vector collideCirclePolygons(Vector center, double radius,
             newCenter, radius, polygons, polygonsSize
         );
         
-        if (check2.pushVecsSize == 0) {
-            return newCenter;
-        } else if (check2.pushVecsSize == 1 && 
-            sameID(check1.ids[0], check2.ids[0])) {
-                
+        if (check2.pushVecsSize == 0 ||
+            (check2.pushVecsSize == 1 &&
+            sameID(check1.ids[0], check2.ids[0]))) {
             return newCenter;
         }
         
@@ -70,11 +68,9 @@ Vector collideCirclePolygons(Vector center, double radius,
             newCenter, radius, polygons, polygonsSize
         );
         
-        if (check2.pushVecsSize == 0) {
-            return newCenter;
-        } else if (check2.pushVecsSize == 1 && 
-            sameID(check1.ids[0], check2.ids[0])) {
-                
+        if (check2.pushVecsSize == 0 ||
+            (check2.pushVecsSize == 1 &&
+            sameID(check1.ids[0], check2.ids[0]))) {
             return newCenter;
         }
         
@@ -85,11 +81,9 @@ Vector collideCirclePolygons(Vector center, double radius,
             newCenter, radius, polygons, polygonsSize
         );
         
-        if (check2.pushVecsSize == 0) {
-            return newCenter;
-        } else if (check2.pushVecsSize == 1 && 
-            sameID(check1.ids[1], check2.ids[0])) {
-                
+        if (check2.pushVecsSize == 0 ||
+            (check2.pushVecsSize == 1 &&
+            sameID(check1.ids[1], check2.ids[0]))) {
             return newCenter;
         }
         
@@ -107,7 +101,7 @@ Vector collideCirclePolygons(Vector center, double radius,
 }
 
 CirclePolygonsCollision collideCirclePolygonsHelper(
-    Vector center, double radius, 
+    Vector center, double radius,
     const Polygon* const* polygons, int polygonsSize) {
         
     double r2 = radius * radius;

@@ -49,7 +49,7 @@ void blur(double* rasterA, double* rasterB, int width, int height,
             
             int idxA_ = idxA;
             for (int i = startWeightI; i < endWeightI; i++) {
-                double w = weights[i];
+                double w = weights[i]; // NOLINT(clang-analyzer-core.uninitialized.Assign)
                 v += w * rasterA[idxA_ + 0];
                 
                 idxA_++;
@@ -87,7 +87,7 @@ void blur(double* rasterA, double* rasterB, int width, int height,
             
             int idxA_ = idxA;
             for (int i = startWeightI; i < endWeightI; i++) {
-                double w = weights[i];
+                double w = weights[i]; // NOLINT(clang-analyzer-core.uninitialized.Assign)
                 v += w * rasterA[idxA_];
                 
                 idxA_ += rowInc;

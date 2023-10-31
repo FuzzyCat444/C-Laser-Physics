@@ -2,9 +2,9 @@
 # This script converts Inkscape Plain SVG exports to C source code for the
 # program to construct the level from. This script is not perfect and will fail
 # if the format is different from what's expected. Inkscape should be set to
-# export absolute coordinates and can only handle polygons. Also, any
-# SVG commands besides M at the beginning of coordinate lists or Z at the end
-# will cause problems.
+# export absolute coordinates (and only polygons). Also, any SVG commands 
+# besides M at the beginning of coordinate lists or Z at the end
+# will cause problems (beware H and V for horizontal and vertical lines).
 
 levelFile = open("level.svg", "r")
 outputFile = open("level.txt", "w")

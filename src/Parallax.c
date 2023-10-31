@@ -52,6 +52,7 @@ void renderParallax(Raster* screen, const Polygon* const* polygons,
     }
     if (doCap) {
         for (int j = 0; j < polygonsSize; j++) { 
+            // NOLINTNEXTLINE(clang-analyzer-core.CallAndMessage)
             RenderPolygon_Render(renderPolygons[j], screen,
                 capCol, combined.offset, combined.scale);
         }
